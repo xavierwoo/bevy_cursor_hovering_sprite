@@ -8,7 +8,7 @@ edition = "2021"
 [dependencies]
 bevy = { version = "0.13.0"}
 
-bevy_cursor_hovering_sprite = {path = "../"}
+bevy_cursor_hovering_sprite = { version = "0.1.0"}
 
 [profile.dev.package."*"]
 opt-level = 3

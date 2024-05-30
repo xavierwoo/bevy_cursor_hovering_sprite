@@ -444,6 +444,8 @@ dependencies = [
 [[package]]
 name = "bevy_cursor_hovering_sprite"
 version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f9baa76359bf0edfdbbc5a5226f95b0f8ba4adf3e033d7392f2d6599d6327918"
 dependencies = [
  "bevy",
 ]
