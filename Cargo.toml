@@ -8,6 +8,9 @@ keywords = ["Sprite picking", "Sprite hovering", "bevy"]
 categories = ["game-development"]
 license = "MIT"
 readme = "README.md"
+exclude = [
+    "example/"
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
