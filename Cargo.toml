@@ -2,7 +2,6 @@
 name = "bevy_cursor_hovering_sprite"
 version = "0.1.0"
 edition = "2021"
-author = "xavier.woo@gmail.com"
 description = "a very lightweight plugin for bevy engine to check if a cursor is hovering on one 2d sprite"
 repository = "https://github.com/xavierwoo/bevy_cursor_hovering_sprite"
 keywords = ["Sprite picking", "Sprite hovering", "bevy"]
