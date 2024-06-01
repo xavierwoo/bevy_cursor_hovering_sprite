@@ -2,6 +2,11 @@
 
 Here is a very lightweight plugin for bevy engine to check if a cursor is hovering on one 2d sprite.
 
+| bevy  | bevy_cursor_hovering_sprite |
+|-------|---------------------|
+| 0.13  | 0.1.0                 |
+
+
 ## What does it do?
 
 When adding this plugin to your bevy project and attaching a **SpriteBorder** component to one entity (may be a sprite), this plugin checks if the cursor is currently hovering in the region defined by the SpriteBorder and the entity's coordinate.
