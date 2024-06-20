@@ -4,7 +4,7 @@ Here is a very lightweight plugin for bevy engine to check if a cursor is hoveri
 
 | bevy  | bevy_cursor_hovering_sprite |
 |-------|---------------------|
-| 0.13  | 0.1.0                 |
+| 0.13  | ^0.1.0                 |
 
 
 ## What does it do?

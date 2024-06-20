@@ -105,7 +105,7 @@ fn cursor_hovering(
     window_query: Query<&Window>,
     camera_query: Query<(&Camera, &GlobalTransform)>,
     visible_entities_query: Query<&VisibleEntities>,
-    sprite_query: Query<(&Transform, &SpriteBorder)>,
+    sprite_query: Query<(&GlobalTransform, &SpriteBorder)>,
     border_asset: Res<Assets<BorderPolygon>>,
     picking_camera: Res<CursorHoveringCamera>, 
     mut cursor_on_event_writer: EventWriter<CursorOnSprite>,
@@ -117,14 +117,14 @@ fn cursor_hovering(
         if let Some(cursor_xy) = get_cursor_xy(&window_query, &camera_query, camera_entity){
             for entity in visible_entities_query.single().iter(){
                 if let Ok((transform, border))= sprite_query.get(*entity){
-                    
-                    if transform.translation.z < hoving_entity_z {continue}
+                    let global_translation = transform.translation();
+                    if global_translation.z < hoving_entity_z {continue}
 
-                    let border_pos = Vec2{x:transform.translation.x, y:transform.translation.y};
+                    let border_pos = Vec2{x:global_translation.x, y:global_translation.y};
                     let polygon_border = border_asset.get(border.polygon.clone()).unwrap();
                     if point_is_inside_polygon(cursor_xy, border_pos, &polygon_border.points) {
                         hoving_entity = Some(*entity);
-                        hoving_entity_z = transform.translation.z;
+                        hoving_entity_z = global_translation.z;
                     }
                 }
             }
